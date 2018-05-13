@@ -1,0 +1,39 @@
+<% include partials/header %>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<!--
+  <div class="ui container center aligned segment">
+    <h1>Welcome to <%= title%> Page!</h1>
+</div>
+-->
+    <div class="ui main text container segment">
+        <div class="ui huge header">New Album</div>
+        <form class="ui form" action="/addAlbum" method="POST">
+
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="albumName" placeholder="title">
+          </div>
+
+          <!--
+          <div class="field">
+            <label>Alblum Image</label>
+            <input type="text" name="blog[image]" placeholder="image">
+          </div>
+        -->
+          <input class="ui purple inverted button" type="submit">
+        </form>
+      </div>
+
+
+<% include partials/footer %>
+

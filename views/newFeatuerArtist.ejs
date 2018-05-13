@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+block content
+  h1= title
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<!--
+  <div class="ui container center aligned segment">
+    <h1>Welcome to <%= title%> Page!</h1>
+</div>
+-->
+
+
+
+
+    <div class="ui main text container segment">
+
+        <div class="ui huge header">New Featured Artist</div>
+        <form class="ui form" action="/addFeatureArtist" method="POST">
+
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="feature_artist" placeholder="title">
+          </div>
+          <!--
+          <div class="field">
+            <label>Alblum Image</label>
+            <input type="text" name="blog[image]" placeholder="image">
+          </div>
+        -->
+          <input class="ui purple inverted button" type="submit">
+        </form>
+      </div>
+
+
+<% include partials/footer %>

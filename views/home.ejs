@@ -1,0 +1,151 @@
+<% include partials/header %>
+
+
+
+  <div class="ui main text container">
+    <br>
+    <br>
+    <br>
+      <h1>
+          <font color="#00AEFF">S</font>
+          <font color="#E74C3C">p</font>
+          <font color="#FFA600">o</font>
+          <font color="#00AEFF">t</font>
+          <font color="#00DC21">i</font>
+          <font color="#00AEFF">Q</font>
+          <font color="E74C3C">u</font>
+          <font color="#FFA600">a</font>
+          <font color="#00AEFF">L</font>
+          <font color="#E74C3C">i</font>
+          <font color="#FF8B00">z</font>
+          <font color="#67FF3F">e</font>
+      </h1>
+    <br>
+    <br>
+
+    <div class="ui dividing header"><i class="spotify icon"></i>
+    Song DB</div>
+
+      <!-- <div class ="ui divided items">
+        <% song.forEach(function(song){ %>
+
+          <div class="item">
+
+             <div class="image">
+                <img src="<%=song.url%>">
+              </div>
+
+              <div class="content">
+                <label>Song Name: </label>
+                <h3><%=song.songName%></h3>
+          </div>
+        </div>
+        <% }) %> -->
+          <div class="ui link cards">
+          <% song.forEach(function(song){ %>
+
+          <div class="card">
+          <div class="image">
+            <img src="<%=song.url%>">
+          </div>
+          <div class="content">
+            <a class="header"><%=song.songName%></a>
+            <div class="meta">
+              <span class='data'>2019</span>
+            </div>
+            <div class="description">
+              <%=song.albumName%>
+            </div>
+          </div>
+            <div class="extra content">
+              <a>
+                <i class="calendar alternate outline icon"></i>
+                <%=song.createdAt.toDateString()%>
+              </a>
+
+              <span class="right floated">
+                <i class="heart outline like icon"></i>
+              </span>
+            </div>
+        </div>
+
+  <% }) %>
+  </div>
+
+<br>
+<br>
+
+    <div class="ui dividing header">
+      <i class="user circle icon"></i>
+      Artist DB</div>
+
+      <!--<div class ="ui four column equal width center padded grid">-->
+        <div class="ui five column stackable padded middle aligned centered color grid">
+          <% for(var i = 0; i < song.length; i++) { %>
+
+            <%if(i==0) {%>
+          <div class="red column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==1) {%>
+          <div class="orange column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==2) {%>
+          <div class="yellow column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==3) {%>
+          <div class="green column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==4) {%>
+          <div class="blue column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==5) {%>
+          <div class="teal column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==6) {%>
+          <div class="blue column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==7) {%>
+          <div class="violet column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==8) {%>
+          <div class="purple column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==9) {%>
+          <div class="pink column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==10) {%>
+          <div class="brown column"><%=song[i].artistName %></div>
+            <%}%>
+            <%if(i==11) {%>
+          <div class="violet column"><%=song[i].artistName %></div>
+            <%}%>
+
+        <% } %>
+      </div>
+
+      <br>
+      <br>
+
+    <div class="ui dividing header">
+      <i class="headphones icon"></i>
+      Album DB</div>
+
+      <div class ="ui four column equal width center padded grid">
+        <% song.forEach(function(album){ %>
+          <div class="column">
+          <h3 class="ui center aligned segment"><%=album.albumName%></h3>
+          </div>
+        <% }) %>
+      </div>
+</div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<% include partials/footer %>
