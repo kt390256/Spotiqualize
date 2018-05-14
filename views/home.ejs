@@ -49,11 +49,15 @@
             <img src="<%=song.url%>">
           </div>
           <div class="content">
+            <div class="ui right floated text">
+              <div class="meta"><%=song.artistName%></div>
+            </div>
             <a class="header"><%=song.songName%></a>
             <div class="meta">
-              <span class='data'>2019</span>
+              <span class='data'><%=song.date%></span>
             </div>
-            <div class="description">
+
+            <div class="albumName">
               <%=song.albumName%>
             </div>
           </div>

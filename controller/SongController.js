@@ -15,6 +15,7 @@ module.exports.addSong = function(req, res){
   let songName = req.body.songName;
   let albumName = req.body.albumName;
   let artistName = req.body.artistName;
+  let releaseYear = req.body.release_year;
   let img = req.body.image;
 //creates new Artist
 //models.the first parameter of sequelize define
@@ -22,6 +23,7 @@ module.exports.addSong = function(req, res){
     songName : songName,
     albumName : albumName,
     artistName : artistName,
+    date : releaseYear,
       url: img
   });
 
